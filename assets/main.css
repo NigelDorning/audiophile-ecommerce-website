@@ -88,3 +88,11 @@ select {
     --black: #000000;
     --white: #ffffff;
 }
+
+/* ===GLOBAL STYLE=== */
+
+body {
+    font-family: 'Manrope', sans-serif;
+}
+
+
