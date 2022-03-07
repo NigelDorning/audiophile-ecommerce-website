@@ -1,0 +1,11 @@
+{
+    "name": "Main blog page",
+    "sections": {
+        "placeholder": {
+            "type": "placeholder"
+        }
+    },
+    "order": [
+        "placeholder"
+    ]
+}

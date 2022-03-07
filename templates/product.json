@@ -1,0 +1,11 @@
+{
+    "name": "Main product page",
+    "sections": {
+        "placeholder": {
+            "type": "placeholder"
+        }
+    },
+    "order": [
+        "placeholder"
+    ]
+}

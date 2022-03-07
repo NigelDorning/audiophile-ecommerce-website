@@ -1,0 +1,11 @@
+{
+    "name": "Main list collections page",
+    "sections": {
+        "placeholder": {
+            "type": "placeholder"
+        }
+    },
+    "order": [
+        "placeholder"
+    ]
+}

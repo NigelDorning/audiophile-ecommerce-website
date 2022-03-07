@@ -1,0 +1,11 @@
+{
+    "name": "Main login page",
+    "sections": {
+        "placeholder": {
+            "type": "placeholder"
+        }
+    },
+    "order": [
+        "placeholder"
+    ]
+}

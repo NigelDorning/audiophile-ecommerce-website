@@ -1,0 +1,11 @@
+{
+    "name": "Main register page",
+    "sections": {
+        "placeholder": {
+            "type": "placeholder"
+        }
+    },
+    "order": [
+        "placeholder"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Main 404 page",
+    "sections": {
+        "placeholder": {
+            "type": "placeholder"
+        }
+    },
+    "order": [
+        "placeholder"
+    ]
+}

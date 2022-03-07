@@ -1,0 +1,11 @@
+{
+    "name": "Main gift card page",
+    "sections": {
+        "placeholder": {
+            "type": "placeholder"
+        }
+    },
+    "order": [
+        "placeholder"
+    ]
+}

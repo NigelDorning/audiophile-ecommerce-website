@@ -1,0 +1,11 @@
+{
+    "name": "Main activate account page",
+    "sections": {
+        "placeholder": {
+            "type": "placeholder"
+        }
+    },
+    "order": [
+        "placeholder"
+    ]
+}

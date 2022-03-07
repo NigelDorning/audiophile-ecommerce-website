@@ -1,0 +1,11 @@
+{
+    "name": "Main single page",
+    "sections": {
+        "placeholder": {
+            "type": "placeholder"
+        }
+    },
+    "order": [
+        "placeholder"
+    ]
+}

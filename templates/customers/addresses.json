@@ -1,0 +1,11 @@
+{
+    "name": "Main addresses page",
+    "sections": {
+        "placeholder": {
+            "type": "placeholder"
+        }
+    },
+    "order": [
+        "placeholder"
+    ]
+}

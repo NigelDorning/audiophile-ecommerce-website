@@ -1,0 +1,11 @@
+{
+    "name": "Main search results page",
+    "sections": {
+        "placeholder": {
+            "type": "placeholder"
+        }
+    },
+    "order": [
+        "placeholder"
+    ]
+}

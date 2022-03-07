@@ -1,0 +1,11 @@
+{
+    "name": "Main cart page",
+    "sections": {
+        "placeholder": {
+            "type": "placeholder"
+        }
+    },
+    "order": [
+        "placeholder"
+    ]
+}
