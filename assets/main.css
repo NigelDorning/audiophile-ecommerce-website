@@ -85,6 +85,8 @@ select {
     --cod-gray: #101010;
     --seashell: #f1f1f1;
     --alabaster: #fafafa;
+    --persian-red: #CD2C2C;
+    --alto: #CFCFCF;
     --black: #000000;
     --white: #ffffff;
 }
@@ -96,6 +98,11 @@ body {
     font-weight: 500;
     font-size: 15px;
     line-height: 25px;
+}
+
+.container {
+  max-width: 1110px;
+  margin: auto;
 }
 
 /* ===TYPOGRAPHY=== */
@@ -167,3 +174,84 @@ h6 {
 }
 
 /* ===BUTTONS=== */
+
+.btn {
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  border-radius: 0;
+  border: 0;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  border-radius: 0;
+  border: 0;
+  background: var(--raw-sienna);
+  color: var(--white);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--hit-pink);
+}
+
+.btn--outline {
+  color: var(--black);
+  background: var(--white);
+  border: 1px solid var(--black);
+}
+
+.btn--outline:hover {
+  background: var(--black);
+  color: var(--white);
+}
+
+.btn--link {
+  color: var(--black);
+  background: var(--white);
+}
+
+.btn--link:hover {
+   color: var(--raw-sienna);
+   background: var(--white);
+}
+
+/* ===FORM INPUTS=== */
+
+.form-control label,
+.form-control input{
+  display: block;
+  width: 100%;
+  font-weight: bold;
+}
+
+.form-control__top {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-control input {
+  padding: 1rem;
+  border: 1px solid var(--alto);
+  border-radius: 5px;
+  outline: none;
+}
+
+.form-control input::placeholder {
+  color: var(--black);
+  opacity: .4;
+}
+
+.form-control input:focus {
+  border-color: var(--raw-sienna);
+}
+
+.form-control--error,
+.form-control--error input {
+  border-color: var(--persian-red);
+}
+
+/* ===HEADER=== */
