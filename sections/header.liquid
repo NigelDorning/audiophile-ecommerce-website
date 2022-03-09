@@ -1,7 +1,35 @@
 <div class="site-header__inner container">
 
+    <button class="menu-trigger">
+        <img src="{{ 'icon-hamburger.svg' | asset_url }}" alt="Hamburger icon">
+    </button>
+
     <img src="{{ 'logo.svg' | asset_url }}" alt="Audiophile logo">
 
+    <nav class="main-menu main-menu--hidden">
+        <ul>
+            {% for link in section.settings.main_menu.links %}
+                <li>
+                    <a href="{{ link.url }}">{{ link.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
+
+    <img src="{{ 'icon-cart.svg' | asset_url }}" alt="Cart icon">
+
+</div>
+
+<div class="mobile-menu mobile-menu--hidden">
+    <nav>
+        <ul>
+            {% for link in section.settings.main_menu.links %}
+                <li>
+                    <a href="{{ link.url }}">{{ link.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
 </div>
 
 {% schema %}
@@ -10,6 +38,14 @@
     "tag": "header",
     "class": "site-header",
     "limit": 1,
+    "settings": [
+        {
+            "type": "link_list",
+            "id": "main_menu",
+            "label": "Main Menu"
+
+        }
+    ],
     "presets": [
         {
             "name": "Header"

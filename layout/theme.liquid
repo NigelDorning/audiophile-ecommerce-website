@@ -11,6 +11,20 @@
 
     <title>{{ page_title }}</title>
 
+    <style>
+        :root {
+            --raw-sienna: #D87D4A;
+            --hit-pink: #fbaf85;
+            --cod-gray: #101010;
+            --seashell: #f1f1f1;
+            --alabaster: #fafafa;
+            --persian-red: #CD2C2C;
+            --alto: #CFCFCF;
+            --black: #000000;
+            --white: #ffffff;
+        }
+    </style>
+
     {{ 'main.css' | asset_url | stylesheet_tag }}
 
     {{ content_for_header }}

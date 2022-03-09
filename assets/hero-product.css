@@ -1,0 +1,42 @@
+.hero-product {
+    position: relative
+}
+
+.hero-product__content {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    max-width: 90%;
+    text-align: center;
+}
+
+.hero-product__content > * + * {
+    margin-top: 2rem;
+}
+
+.hero-product__header {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-product__heading,
+.hero-product__subheading,
+.hero-product__description {
+    color: var(--white);
+}
+
+.hero-product__heading {
+    font-size: 36px;
+    margin-top: 1rem;
+    order: 2;
+}
+
+.hero-product__subheading {
+    opacity: .5;
+    order: 1;
+}
+
+.hero-product__description {
+    opacity: .75;
+}

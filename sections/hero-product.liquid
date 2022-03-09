@@ -1,0 +1,68 @@
+<picture>
+    <source media="(min-width: 768px)" srcset="{{ section.settings.hero_product_desktop_mobile | image_url }}">
+    <img 
+        src="{{ section.settings.hero_product_image_mobile | image_url: width:375, height: 600 }}" 
+        alt="{{ section.settings.hero_product_image_mobile.alt }}"
+    >
+</picture>
+
+<div class="hero-product__content">
+    <div class="hero-product__header">
+        <h1 class="hero-product__heading">{{ section.settings.hero_product_heading }}</h1>
+        <h2 class="hero-product__subheading overline">{{ section.settings.hero_product_subheading }}</h2>
+    </div>
+    <div class="hero-product__description">{{ section.settings.hero_product_description }}</div>
+    <a href="{{ section.settings.hero_product_link }}" class="btn">See Product</a>
+</div>
+
+{% schema %}
+{
+    "name": "Hero Product",
+    "tag": "section",
+    "class": "hero-product",
+    "settings": [
+        {
+            "type": "text",
+            "id": "hero_product_heading",
+            "label": "Hero Product Heading"
+        },
+        {
+            "type": "text",
+            "id": "hero_product_subheading",
+            "label": "Hero Product Subheading"
+        },
+        {
+            "type": "richtext",
+            "id": "hero_product_description",
+            "label": "Hero Product Description"
+        },
+        {
+            "type": "image_picker",
+            "id": "hero_product_image_mobile",
+            "label": "Hero Product Image Mobile"
+        },
+        {
+            "type": "image_picker",
+            "id": "hero_product_image_tablet",
+            "label": "Hero Product Image Tablet"
+        },
+        {
+            "type": "image_picker",
+            "id": "hero_product_image_desktop",
+            "label": "Hero Product Image Desktop"
+        },
+        {
+            "type": "url",
+            "id": "hero_product_link",
+            "label": "Hero Product Link"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Hero Product"
+        }
+    ]
+}
+{% endschema %}
+
+{{ 'hero-product.css' | asset_url | stylesheet_tag }}
