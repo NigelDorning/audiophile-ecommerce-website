@@ -1,0 +1,75 @@
+{% assign collection_one = section.settings.collection_one %}
+{% assign collection_two = section.settings.collection_two %}
+{% assign collection_three = section.settings.collection_three %}
+
+<div class="home-collections container">
+
+    <a href="{{ collection_one.url }}" class="home-collection">
+        <img 
+            src="{{ collection_one.featured_image | image_url: width:150 }}" 
+            alt="{{ collection_one.alt }}"
+            class="home-collection__image"
+        >
+        <div class="home-collection__box">
+            <h2 class="home-collection__title">{{ collection_one.title }}</h2>
+            <p class="home-collection__btn btn btn--link">Shop</p>
+        </div>
+    </a>
+
+    <a href="{{ collection_two.url }}" class="home-collection">
+        <img 
+            src="{{ collection_two.featured_image | image_url: width:150 }}" 
+            alt="{{ collection_two.alt }}"
+            class="home-collection__image"
+        >
+        <div class="home-collection__box">
+            <h2 class="home-collection__title">{{ collection_two.title }}</h2>
+            <p class="home-collection__btn btn btn--link">Shop</p>
+        </div>
+    </a>
+
+    <a href="{{ collection_three.url }}" class="home-collection">
+        <img 
+            src="{{ collection_three.featured_image | image_url: width:150 }}" 
+            alt="{{ collection_three.alt }}"
+            class="home-collection__image"
+        >
+        <div class="home-collection__box">
+            <h2 class="home-collection__title">{{ collection_three.title }}</h2>
+            <p class="home-collection__btn btn btn--link">Shop</p>
+        </div>
+    </a>
+
+</div>
+
+{% schema %}
+{
+    "name": "Home Collection Row",
+    "tag": "section",
+    "class": "home-collection-row",
+    "settings": [
+        {
+            "type": "collection",
+            "id": "collection_one",
+            "label": "Collection One"
+        },
+        {
+            "type": "collection",
+            "id": "collection_two",
+            "label": "Collection Two"
+        },
+        {
+            "type": "collection",
+            "id": "collection_three",
+            "label": "Collection Three"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Home Collection Row"
+        }
+    ]
+}
+{% endschema %}
+
+{{ 'home-collection-row.css' | asset_url | stylesheet_tag }}

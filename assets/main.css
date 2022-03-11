@@ -190,12 +190,13 @@ h6 {
 
 .btn--link {
   color: var(--black);
-  background: var(--white);
+  background: transparent;
+  padding: 0;
 }
 
 .btn--link:hover {
    color: var(--raw-sienna);
-   background: var(--white);
+   background: transparent;
 }
 
 /* ===FORM INPUTS=== */
