@@ -1,0 +1,217 @@
+<div class="featured-products__grid container mx-auto">
+
+    <div class="featured-products__1">
+        <picture>
+            <source 
+                media="(min-width: 1440px)" 
+                srcset="{{ section.settings.product_1_desktop_image | image_url }}"
+            >
+
+            <source 
+                media="(min-width: 768px)" 
+                srcset="{{ section.settings.product_1_tablet_image | image_url }}"
+            >
+
+            <img 
+                src="{{ section.settings.product_1_mobile_image | image_url: width: 172 }}" 
+                alt="{{ section.settings.product_1_mobile_image.alt }}"
+            >
+        </picture>
+
+        <h2>
+            {% if section.settings.product_1_heading != blank %}
+                {{ section.settings.product_1_heading }}
+            {% else %}
+                {{ section.settings.product_1.title }}
+            {% endif %}
+        </h2>
+
+        <p>{{ section.settings.product_1_copy }}</p>
+
+        <a href="{{ section.settings.product_1.url }}" class="btn btn--black">See Product</a>
+    </div>
+
+    <div class="featured-products__2">
+        <picture>
+            <source 
+                media="(min-width: 1440px)" 
+                srcset="{{ section.settings.product_2_desktop_image | image_url }}"
+            >
+
+            <source 
+                media="(min-width: 1440px)" 
+                srcset="{{ section.settings.product_2_desktop_image | image_url }}"
+            >
+
+            <img 
+                src="{{ section.settings.product_2_mobile_image | image_url: width: 327 }}" 
+                alt="{{ section.settings.product_2_mobile_image.alt }}"
+            >
+        </picture>    
+
+        <h2>
+            {% if section.settings.product_2_heading != blank %}
+                {{ section.settings.product_2_heading }}
+            {% else %}
+                {{ section.settings.product_2.title }}
+            {% endif %}
+        </h2>
+
+        <a href="{{ section.settings.product_2.url }}" class="btn">See Product</a>
+    </div>
+
+    <div class="featured-products__3">
+        <picture>
+            <source 
+                media="(min-width: 1440px)" 
+                srcset="{{ section.settings.product_3_desktop_image | image_url }}"
+            >
+
+            <source 
+                media="(min-width: 1440px)" 
+                srcset="{{ section.settings.product_3_desktop_image | image_url }}"
+            >
+
+            <img 
+                src="{{ section.settings.product_3_mobile_image | image_url: width: 327 }}" 
+                alt="{{ section.settings.product_3_mobile_image.alt }}"
+            >
+        </picture>    
+
+        <h2>
+            {% if section.settings.product_3_heading != blank %}
+                {{ section.settings.product_3_heading }}
+            {% else %}
+                {{ section.settings.product_3.title }}
+            {% endif %}
+        </h2>
+
+        <a href="{{ section.settings.product_3.url }}" class="btn">See Product</a>
+    </div>
+
+</div>
+
+
+{% schema %}
+{
+    "name": "Featured Products",
+    "tag": "section",
+    "class": "featured-products",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Product 1"
+        },
+        {
+            "label": "Product 1",
+            "id": "product_1",
+            "type": "product"
+        },
+        {
+            "label": "Image (Mobile)",
+            "id": "product_1_mobile_image",
+            "type": "image_picker"
+        },
+        {
+            "label": "Image (Tablet)",
+            "id": "product_1_tablet_image",
+            "type": "image_picker"
+        },
+        {
+            "label": "Image (Desktop)",
+            "id": "product_1_desktop_image",
+            "type": "image_picker"
+        },
+        {
+            "label": "Product 1 Heading",
+            "id": "product_1_heading",
+            "type": "text",
+            "info": "Leave blank to use the product title."
+        },
+        {
+            "label": "Product 1 Copy",
+            "id": "product_1_copy",
+            "type": "richtext"
+        },
+
+        {
+            "type": "header",
+            "content": "Product 2"
+        },
+        {
+            "label": "Product 2",
+            "id": "product_2",
+            "type": "product"
+        },
+        {
+            "label": "Image (Mobile)",
+            "id": "product_2_mobile_image",
+            "type": "image_picker"
+        },
+        {
+            "label": "Image (Tablet)",
+            "id": "product_2_tablet_image",
+            "type": "image_picker"
+        },
+        {
+            "label": "Image (Desktop)",
+            "id": "product_2_desktop_image",
+            "type": "image_picker"
+        },
+        {
+            "label": "Product 2 Heading",
+            "id": "product_2_heading",
+            "type": "text",
+            "info": "Leave blank to use the product title."
+        },
+        {
+            "label": "Product 2 Copy",
+            "id": "product_2_copy",
+            "type": "richtext"
+        },
+
+        {
+            "type": "header",
+            "content": "Product 3"
+        },
+        {
+            "label": "Product 3",
+            "id": "product_3",
+            "type": "product"
+        },
+        {
+            "label": "Image (Mobile)",
+            "id": "product_3_mobile_image",
+            "type": "image_picker"
+        },
+        {
+            "label": "Image (Tablet)",
+            "id": "product_3_tablet_image",
+            "type": "image_picker"
+        },
+        {
+            "label": "Image (Desktop)",
+            "id": "product_3_desktop_image",
+            "type": "image_picker"
+        },
+        {
+            "label": "Product 3 Heading",
+            "id": "product_3_heading",
+            "type": "text",
+            "info": "Leave blank to use the product title."
+        },
+        {
+            "label": "Product 3 Copy",
+            "id": "product_3_copy",
+            "type": "richtext"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Featured Products"
+        }
+    ]
+}
+{% endschema %}
+
+{{ 'featured-products.css' | asset_url | stylesheet_tag }}

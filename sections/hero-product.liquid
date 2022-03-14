@@ -1,8 +1,9 @@
 <picture>
-    <source media="(min-width: 768px)" srcset="{{ section.settings.hero_product_desktop_mobile | image_url }}">
+    <source media="(min-width: 768px)" srcset="{{ section.settings.hero_product_image_desktop | image_url }}">
     <img 
         src="{{ section.settings.hero_product_image_mobile | image_url: width:375, height: 600 }}" 
         alt="{{ section.settings.hero_product_image_mobile.alt }}"
+        class="hero-product__image"
     >
 </picture>
 
