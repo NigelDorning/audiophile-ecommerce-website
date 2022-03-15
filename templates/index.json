@@ -17,10 +17,19 @@
         "hero_product_image_desktop": "shopify:\/\/shop_images\/image-hero.jpg",
         "hero_product_link": "shopify:\/\/products\/xx99-mark-ii"
       }
+    },
+    "16473674969d36977b": {
+      "type": "home-collection-row",
+      "settings": {
+        "collection_one": "headphones",
+        "collection_two": "speakers",
+        "collection_three": "earphones"
+      }
     }
   },
   "order": [
     "placeholder",
-    "16468560584b765afe"
+    "16468560584b765afe",
+    "16473674969d36977b"
   ]
 }
