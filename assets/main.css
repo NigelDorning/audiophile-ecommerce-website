@@ -105,37 +105,43 @@ h6,
     font-weight: 700;
 }
 
-h1 {
+h1,
+.fs-1 {
     font-size: 56px;
     line-height: 44px;
     letter-spacing: 2px;
 }
 
-h2 {
+h2,
+.fs-2 {
     font-size: 40px;
     line-height: 44px;
     letter-spacing: 1.5px;
 }
 
-h3 {
+h3,
+.fs-3 {
     font-size: 32px;
     line-height: 36px;
     letter-spacing: 1.15px;
 }
 
-h4 {
+h4,
+.fs-4 {
     font-size: 28px;
     line-height: 38px;
     letter-spacing: 2px;
 }
 
-h5 {
+h5,
+.fs-5 {
     font-size: 24px;
     line-height: 33px;
     letter-spacing: 1.7px;
 }
 
-h6 {
+h6,
+.fs-6 {
     font-size: 18px;
     line-height: 24px;
     letter-spacing: 1.3px;
@@ -171,6 +177,11 @@ h6 {
   color: var(--white);
   cursor: pointer;
   text-decoration: none;
+  width: auto;
+}
+
+.btn--small {
+  padding: .5rem 1rem;
 }
 
 .btn:hover {
@@ -179,7 +190,7 @@ h6 {
 
 .btn--outline {
   color: var(--black);
-  background: var(--white);
+  background: transparent;
   border: 1px solid var(--black);
 }
 

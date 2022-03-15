@@ -4,7 +4,7 @@
         <picture>
             <source 
                 media="(min-width: 1440px)" 
-                srcset="{{ section.settings.product_1_desktop_image | image_url }}"
+                srcset="{{ section.settings.product_1_desktop_image | image_url: width: 380 }}"
             >
 
             <source 
@@ -18,17 +18,17 @@
             >
         </picture>
 
-        <h2>
-            {% if section.settings.product_1_heading != blank %}
-                {{ section.settings.product_1_heading }}
-            {% else %}
-                {{ section.settings.product_1.title }}
-            {% endif %}
-        </h2>
-
-        <p>{{ section.settings.product_1_copy }}</p>
-
-        <a href="{{ section.settings.product_1.url }}" class="btn btn--black">See Product</a>
+        <div class="content">
+            <h2>
+                {% if section.settings.product_1_heading != blank %}
+                    {{ section.settings.product_1_heading }}
+                {% else %}
+                    {{ section.settings.product_1.title }}
+                {% endif %}
+            </h2>
+            <p>{{ section.settings.product_1_copy }}</p>
+            <a href="{{ section.settings.product_1.url }}" class="btn btn--black">See Product</a>
+        </div>
     </div>
 
     <div class="featured-products__2">
@@ -49,15 +49,16 @@
             >
         </picture>    
 
-        <h2>
-            {% if section.settings.product_2_heading != blank %}
-                {{ section.settings.product_2_heading }}
-            {% else %}
-                {{ section.settings.product_2.title }}
-            {% endif %}
-        </h2>
-
-        <a href="{{ section.settings.product_2.url }}" class="btn">See Product</a>
+        <div class="content">
+            <h2 class="fs-4">
+                {% if section.settings.product_2_heading != blank %}
+                    {{ section.settings.product_2_heading }}
+                {% else %}
+                    {{ section.settings.product_2.title }}
+                {% endif %}
+            </h2>
+            <a href="{{ section.settings.product_2.url }}" class="btn btn--outline btn--small">See Product</a>
+        </div>
     </div>
 
     <div class="featured-products__3">
@@ -78,15 +79,16 @@
             >
         </picture>    
 
-        <h2>
-            {% if section.settings.product_3_heading != blank %}
-                {{ section.settings.product_3_heading }}
-            {% else %}
-                {{ section.settings.product_3.title }}
-            {% endif %}
-        </h2>
-
-        <a href="{{ section.settings.product_3.url }}" class="btn">See Product</a>
+        <div class="content">
+            <h2 class="fs-4">
+                {% if section.settings.product_3_heading != blank %}
+                    {{ section.settings.product_3_heading }}
+                {% else %}
+                    {{ section.settings.product_3.title }}
+                {% endif %}
+            </h2>
+            <a href="{{ section.settings.product_3.url }}" class="btn btn--outline btn--small">See Product</a>
+        </div>
     </div>
 
 </div>
