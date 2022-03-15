@@ -25,11 +25,29 @@
         "collection_two": "speakers",
         "collection_three": "earphones"
       }
+    },
+    "1647367504c9dcc27d": {
+      "type": "featured-products",
+      "settings": {
+        "product_1": "zx9-speaker",
+        "product_1_mobile_image": "shopify:\/\/shop_images\/image-speaker-zx9.png",
+        "product_1_heading": "",
+        "product_1_copy": "<p>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.<\/p>",
+        "product_2": "zx7-speaker",
+        "product_2_mobile_image": "shopify:\/\/shop_images\/image-speaker-zx7.jpg",
+        "product_2_heading": "",
+        "product_2_copy": "",
+        "product_3": "yx1-wireless-earphones",
+        "product_3_mobile_image": "shopify:\/\/shop_images\/image-earphones-yx1.jpg",
+        "product_3_heading": "",
+        "product_3_copy": ""
+      }
     }
   },
   "order": [
     "placeholder",
     "16468560584b765afe",
-    "16473674969d36977b"
+    "16473674969d36977b",
+    "1647367504c9dcc27d"
   ]
 }
