@@ -1,5 +1,6 @@
 .home-collections {
     display: grid;
+    grid-template-columns: 1fr;
     gap: 2rem;
     width: 90%;
     margin: auto;
@@ -37,4 +38,11 @@
 
 .home-collection:hover .home-collection__btn {
     color: var(--raw-sienna);
+}
+
+@media screen and (min-width: 1440px) {
+    .home-collections {
+        grid-template-columns: repeat(3, 1fr);
+        margin: 5rem auto;
+    }
 }

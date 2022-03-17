@@ -5,11 +5,20 @@
 <div class="home-collections container">
 
     <a href="{{ collection_one.url }}" class="home-collection">
-        <img 
-            src="{{ collection_one.featured_image | image_url: width:150 }}" 
-            alt="{{ collection_one.alt }}"
-            class="home-collection__image"
-        >
+        <picture>
+            <source 
+                media="(min-width: 1440px)" 
+                srcset="{{ collection_one.featured_image | image_url: width: 200, height: 200 }}"
+            >
+
+            <img 
+                src="{{ collection_one.featured_image | image_url: width:150, height: 180 }}" 
+                alt="{{ collection_one.alt }}"
+                class="home-collection__image"
+                loading="lazy"
+            >
+        </picture>
+
         <div class="home-collection__box">
             <h2 class="home-collection__title">{{ collection_one.title }}</h2>
             <p class="home-collection__btn btn btn--link">Shop</p>
@@ -17,11 +26,20 @@
     </a>
 
     <a href="{{ collection_two.url }}" class="home-collection">
-        <img 
-            src="{{ collection_two.featured_image | image_url: width:150 }}" 
-            alt="{{ collection_two.alt }}"
-            class="home-collection__image"
-        >
+        <picture>
+            <source 
+                media="(min-width: 1440px)" 
+                srcset="{{ collection_two.featured_image | image_url: width: 200, height: 200 }}"
+            >
+
+            <img 
+                src="{{ collection_two.featured_image | image_url: width:150 }}" 
+                alt="{{ collection_two.alt }}"
+                class="home-collection__image"
+                loading="lazy"
+            >
+        </picture>
+
         <div class="home-collection__box">
             <h2 class="home-collection__title">{{ collection_two.title }}</h2>
             <p class="home-collection__btn btn btn--link">Shop</p>
@@ -29,11 +47,20 @@
     </a>
 
     <a href="{{ collection_three.url }}" class="home-collection">
-        <img 
-            src="{{ collection_three.featured_image | image_url: width:150 }}" 
-            alt="{{ collection_three.alt }}"
-            class="home-collection__image"
-        >
+        <picture>
+            <source 
+                media="(min-width: 1440px)" 
+                srcset="{{ collection_three.featured_image | image_url: width: 200, height: 200 }}"
+            >
+
+            <img 
+                src="{{ collection_three.featured_image | image_url: width:150 }}" 
+                alt="{{ collection_three.alt }}"
+                class="home-collection__image"
+                loading="lazy"
+            >
+        </picture>
+
         <div class="home-collection__box">
             <h2 class="home-collection__title">{{ collection_three.title }}</h2>
             <p class="home-collection__btn btn btn--link">Shop</p>
