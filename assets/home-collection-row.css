@@ -40,7 +40,7 @@
     color: var(--raw-sienna);
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1200px) {
     .home-collections {
         grid-template-columns: repeat(3, 1fr);
         margin: 5rem auto;
