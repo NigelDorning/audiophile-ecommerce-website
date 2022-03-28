@@ -1,4 +1,25 @@
+<picture>
+    <source 
+        media="(min-width: 1200px)" 
+        srcset="{{ section.settings.image_desktop | image_url }}"
+    >
 
+    <source 
+        media="(min-width: 768px)" 
+        srcset="{{ section.settings.image_tablet | image_url }}"
+    >
+
+    <img 
+        src="{{ section.settings.image_mobile | image_url }}" 
+        alt="{{ section.settings.image_mobile.alt }}"
+        loading="lazy"
+    >
+</picture>
+
+<div class="home-about__copy">
+    <h2 class="fs-4">{{ section.settings.about_heading }}</h2>
+    {{ section.settings.about_copy }}
+</div>
 
 {% schema %}
 {
@@ -24,13 +45,20 @@
         {
             "label": "About Heading",
             "id": "about_heading",
-            "type": "richtext"
+            "type": "text"
         },
         {
             "label": "About Copy",
             "id": "about_copy",
             "type": "richtext"
         }
+    ],
+    "presets": [
+        {
+            "name": "Home About"
+        }
     ]
 }
 {% endschema %}
+
+{{ 'home-about.css' | asset_url | stylesheet_tag }}

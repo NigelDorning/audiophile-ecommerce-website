@@ -16,8 +16,14 @@
         </ul>
     </nav>
 
-    <img src="{{ 'icon-cart.svg' | asset_url }}" alt="Cart icon">
+    <button class="cart-trigger"><img src="{{ 'icon-cart.svg' | asset_url }}" alt="Cart icon"></button>
 
+</div>
+
+<div class="site-header__title">
+    {% if template.name == 'collection' %}
+        <h2 class="fs-4">{{ collection.title }}</h2>
+    {% endif %}
 </div>
 
 <div class="mobile-menu mobile-menu--hidden">
@@ -31,6 +37,41 @@
         </ul>
     </nav>
 </div>
+
+<dialog class="cart-sidebar">
+    <header>
+        <h2 class="fs-6">Cart ({{ cart.item_count }})</h2>
+        <button class="remove-all">Remove all</button>
+    </header>
+    <div class="cart-sidebar__main">
+        {% if cart.item_count > 0 %}
+            {% for item in cart.items %}
+                <div class="cart-sidebar__item">
+                    <div class="cart-sidebar__item-details">
+                        <img src="{{ item.image | image_url: width: 64 }}" alt="{{ item.image.alt }}">
+                        <div>
+                            <p>{{ item.title }}</p>
+                            <p>{{ item.final_line_price | money }}</p>
+                        </div>                        
+                    </div>
+
+                    <div class="cart-sidebar__item-qty" data-item-id="{{ item.variant_id }}">
+                        <button class="cart-sidebar__decrease-qty">-</button>
+                        <input type="number" class="cart-sidebar__qty-input" value="{{ item.quantity }}">
+                        <button class="cart-sidebar__increase-qty">+</button>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>Cart empty</p>
+        {% endif %}
+    </div>
+    <footer>
+        <form action="{{ routes.cart_url }}" method="post">
+            <input type="submit" name="checkout" value="Checkout" class="btn btn--block">
+        </form>
+    </footer>
+</dialog>
 
 {% schema %}
 {

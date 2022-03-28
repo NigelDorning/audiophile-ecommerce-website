@@ -1,11 +1,11 @@
 {
     "name": "Main collection page",
     "sections": {
-        "placeholder": {
-            "type": "placeholder"
+        "main-collection": {
+            "type": "main-collection"
         }
     },
     "order": [
-        "placeholder"
+        "main-collection"
     ]
 }

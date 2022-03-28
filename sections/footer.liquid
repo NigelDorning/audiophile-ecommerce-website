@@ -1,0 +1,66 @@
+<div class="site-footer__inner">
+    <img src="{{ 'logo.svg' | asset_url }}" alt="Audiophile logo">
+
+    <nav class="site-footer__menu">
+        <ul>
+            {% for link in section.settings.menu.links %}
+                <li>
+                    <a href="{{ link.url }}">{{ link.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
+
+    <div class="site-footer__about">
+        {{ section.settings.about }}
+    </div>
+
+</div>
+
+{% schema %}
+{
+    "name": "Footer",
+    "tag": "footer",
+    "class": "site-footer",
+    "settings": [
+        {
+            "label": "Logo",
+            "id": "logo",
+            "type": "image_picker"
+        },
+        {
+            "label": "About",
+            "id": "about",
+            "type": "richtext"
+        },
+        {
+            "label": "Menu",
+            "id": "menu",
+            "type": "link_list"
+        }
+    ],
+    "blocks": [
+        {
+            "name": "Social",
+            "type": "social",
+            "settings": [
+                {
+                    "label": "Icon",
+                    "id": "icon",
+                    "type": "image_picker"
+                },
+                {
+                    "label": "Link",
+                    "id": "link",
+                    "type": "text"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Footer"
+        }
+    ]
+}
+{% endschema %}

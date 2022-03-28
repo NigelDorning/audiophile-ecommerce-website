@@ -26,6 +26,8 @@
     </style>
 
     {{ 'main.css' | asset_url | stylesheet_tag }}
+    
+    <script src="{{ 'main.js' | asset_url }}" defer></script>
 
     {{ content_for_header }}
 </head>
@@ -33,9 +35,11 @@
 
     {% section 'header' %}
     
-    <main>
+    <main class="{% if template.name != 'index' %} body-top-margin {% endif %}">
         {{ content_for_layout }}
     </main>
+
+    {% section 'footer' %}
 
 </body>
 </html>
