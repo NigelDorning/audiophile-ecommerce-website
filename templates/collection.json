@@ -1,11 +1,21 @@
 {
-    "name": "Main collection page",
-    "sections": {
-        "main-collection": {
-            "type": "main-collection"
-        }
+  "sections": {
+    "main-collection": {
+      "type": "main-collection",
+      "settings": {
+      }
     },
-    "order": [
-        "main-collection"
-    ]
+    "16484938648f5c52b0": {
+      "type": "home-collection-row",
+      "settings": {
+        "collection_one": "headphones",
+        "collection_two": "speakers",
+        "collection_three": "earphones"
+      }
+    }
+  },
+  "order": [
+    "main-collection",
+    "16484938648f5c52b0"
+  ]
 }
