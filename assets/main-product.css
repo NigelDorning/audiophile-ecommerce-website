@@ -1,0 +1,45 @@
+.product-main {
+    padding: 1rem;
+}
+
+.product-main > * + * {
+    margin-top: 2rem;
+}
+
+.product-form {
+    display: flex;
+    align-items: center;
+}
+
+.product-form .btn {
+    margin-left: 2rem;
+}
+
+.product-form .variants-select {
+    display: none;
+}
+
+.features > * + *,
+.in-the-box > * + * {
+    margin-top: 2rem;
+}
+
+.in-the-box ul {
+    padding: 0;
+}
+
+.in-the-box li {
+    list-style-type: none;
+}
+
+.in-the-box ul > * + * {
+    margin-top: 1rem;
+}
+
+.product-images {
+    margin-top: 4rem;
+}
+
+.product-images > * + * {
+    margin-top: 1rem;
+}

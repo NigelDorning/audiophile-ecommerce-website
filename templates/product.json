@@ -1,11 +1,11 @@
 {
     "name": "Main product page",
     "sections": {
-        "placeholder": {
-            "type": "placeholder"
+        "product-main": {
+            "type": "product-main"
         }
     },
     "order": [
-        "placeholder"
+        "product-main"
     ]
 }

@@ -20,11 +20,12 @@
 
 </div>
 
-<div class="site-header__title">
-    {% if template.name == 'collection' %}
+
+{% if template.name == 'collection' %}
+    <div class="site-header__title">
         <h2 class="fs-4">{{ collection.title }}</h2>
-    {% endif %}
-</div>
+    </div>
+{% endif %}
 
 <div class="mobile-menu mobile-menu--hidden">
     <nav>

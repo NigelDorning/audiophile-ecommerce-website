@@ -382,6 +382,29 @@ h6,
   border-radius: 8px;
 }
 
+/* ===QUANTITY=== */
+.quantity {
+  display: flex;
+  align-items: center;
+}
+
+.quantity > * {
+  display: block;
+  border: 0;
+  width: 40px;
+  height: 40px;
+  background-color: var(--seashell);
+}
+
+.quantity__input {
+  appearance: textfield;
+  text-align: center;
+}
+
+.quantity button {
+  cursor: pointer;
+}
+
 /* ===FOOTER=== */
 .site-footer {
   padding: 1.5rem;
